@@ -4,4 +4,4 @@ x. Create a loopback app[https://loopback.io/doc/en/lb3/Application-generator.ht
 x. Run you app: node .
   Navigate to (http://localhost:3000/explorer/)
 
-x.
+x. Follow this guide: (https://github.com/toddmotto/angularjs-styleguide)

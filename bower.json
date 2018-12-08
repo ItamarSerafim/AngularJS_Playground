@@ -1,0 +1,23 @@
+{
+  "name": "ANgularJS_Playground",
+  "authors": [
+    "Itamar Serafim; <saladatododia@hotmail.com;>"
+  ],
+  "description": "Playground for AngualrJS + Anguar Materail",
+  "main": "",
+  "license": "Dont mess with my app",
+  "homepage": "client/index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  },
+  "resolutions": {
+  }
+}
