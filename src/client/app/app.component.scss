@@ -1,0 +1,43 @@
+// @import '/node_modules/font-awesome/scss/_path.scss';
+
+// @import '/node_modules/font-awesome/css/font-awesome.min.css';
+
+.flex{
+  flex: 1;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-col > .flex,
+.flex-row > .flex {
+  flex: 1;
+}
+.page-content {
+  min-height: 100vh;
+}
+.page-content .main-aside {
+  padding: 1em;
+  background-color: lightcoral;
+  flex: 0 1 320px;
+}
+.page-content .main-page-content {
+  padding: 1em;
+  background-color: lightgrey;
+  min-height: 80vh;
+  flex: none;
+}
+.page-footer {
+  background-color: #555555;
+}
+
+@media (min-width: 1200px) {
+  .bd-sidebar {
+    flex: 0 1 320px;
+  }
+}

@@ -1,1 +1,38 @@
-<h1>Welcom to Home Page</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <base href="/"><!-- URL base required for using html5 mode routing -->
+        <!-- Metas here: viewport, charset, description,  -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Playground for AngularJS 1.7.5">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="msapplication-TileImage" content="images/favico3.ico">
+        <link rel="shortcut icon" href="images/favico3.ico" type="image/x-icon">
+        <!--
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.4/angular-material.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.0.46/css/materialdesignicons.min.css">
+        -->
+        <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/vendor/fontawesome/css/all.css"/>
+        <title>AngularJs with Bootstrap 4</title>
+        <script>
+            window.Chart = window.Charts || {};
+        </script>
+        <!-- Angular dependencies -->
+        <script src="/vendor/angular/angular.min.js"></script>
+        <script src="/vendor/angular-resource/angular-resource.min.js"></script>
+        <script src="/vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <link  rel="stylesheet">
+  </head>
+    <body layout="row" data-ng-app="App" >
+      <app-component></app-component>
+
+
+        <!-- This reference if ommited will not let HMR work-->
+        <script src="dist/bundle.js"></script>
+        <!-- <script type="text/javascript" src="http://localhost:8089/dist/bundle.c548cd8a736b.min.js"></script>
+        <script type="text/javascript" src="http://localhost:8089/dist/bundle.0c4173af96be.min.min.js"></script>
+        -->
+      </body>
+</html>

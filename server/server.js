@@ -12,6 +12,7 @@ var path = require('path');
 // List here the paths you do not want to be redirected to the angular application (scripts, stylesheets, templates, loopback REST API, ...)
 var ignoredPaths = [
   '/vendor',
+  '/client/vendor',
   '/css',
   '/js',
   '/views',
@@ -22,14 +23,14 @@ var ignoredPaths = [
   '/parts',
   '/explorer',
   '/mngt',
-  '/mngt',
   '/mngt/src',
   '/admin',
-  '/components'
+  '/components',
 ];
 
 app.all('/*', function(req, res, next) {
   // Redirecting to index only the requests that do not start with ignored paths
+  debugger;
   if (!startsWith(req.url, ignoredPaths))
     res.sendFile('index.html', {
       root: path.resolve(__dirname, '..', 'client'),

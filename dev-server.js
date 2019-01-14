@@ -19,5 +19,5 @@ var server = new WebPackDevServer(compiler, {
 });
 
 server.listen(8089, 'localhost', function() {
-  console.log('Webpack Sever is running, ', arguments);
+  console.log('Webpack Server is running........................', arguments);
 });
