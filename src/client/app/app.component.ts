@@ -45,7 +45,8 @@ export default class AppComponent implements IComponentOptions {
   constructor() {
     this.controller = AppComponentController;
     this.templateUrl = templateUrl;
-    this.controllerAs = 'vm';
+    this.controllerAs = 'vm'; // FIXME: Don't use controllerAs
+
   }
 
 }

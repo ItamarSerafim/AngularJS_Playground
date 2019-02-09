@@ -18,10 +18,19 @@ new webpack.ProvidePlugin({
   // ChartJs: 'chart.js'
 });
 module.exports = {
-  entry: ['./src/client/app/main.ts'],
+  entry: {
+    test: './src/client/app/print.ts',
+    main: './src/client/app/main.ts',
+  },
   mode: 'development',
-  devtool: 'eval-source-map',
+  // devtool: 'eval-source-map',
+  devtool: 'inline-source-map',
+  // devServer: {
+  //   contentBase: './dist',
+  //   // hot: true,
+  // },
   plugins: [
+    // new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     externalLibPluginProvider,
     // ['style-loader', 'css-loader?localIdentName=[path][name]-[local]'],
@@ -81,7 +90,7 @@ module.exports = {
   },
   context: __dirname,
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, './client/dist/'),
     // publicPath: '/',
     // publicPath: '/dist/',

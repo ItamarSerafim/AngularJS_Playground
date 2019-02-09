@@ -4,7 +4,7 @@ import seedLinks from '../../../seed-data/seed-navigation-link';
 export default class SideNavService {
   seedLinks: Link[]; //TODO: remove this mock
   links: Link[] = seedLinks.map<Link>(link => Link.fromJSON(link));
-  private isOpen: boolean;
+  private isOpen: boolean = true;
   constructor(){
 
   }

@@ -12,9 +12,9 @@ export default class SideNavComponent implements IComponentOptions {
   constructor(){
     this.controller = SideNavController;
     this.templateUrl = templateUrl;
-    this.controllerAs = 'vm';
-    this.bindings = {
-      links: "<"
-    }
+    this.controllerAs = 'vm'; // FIXME: don't use controllerAs
+    // this.bindings = {
+    //   links: "<"
+    // }
   }
 }

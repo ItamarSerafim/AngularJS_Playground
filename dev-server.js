@@ -1,13 +1,12 @@
 'use strict';
 var WebPackDevServer = require('webpack-dev-server');
 var Webpack = require('webpack');
-var config = require('./webpack.config.js');
 var path = require('path');
 
-var compiler = Webpack(config);
-console.log('config.output: ', config.output);
-var server = new WebPackDevServer(compiler, {
-  hot: true,
+var config = require('./webpack.config.js');
+const options = {
+  // hot: true,
+  host: 'localhost',
   filename: config.output.filename,
   inline: true,
   publicPath: config.output.publicPath,
@@ -16,8 +15,13 @@ var server = new WebPackDevServer(compiler, {
   stats: {
     colors: true,
   },
-});
+};
 
+WebPackDevServer.addDevServerEntrypoints(config, options);
+var compiler = Webpack(config);
+var server = new WebPackDevServer(compiler, options);
+
+console.log('config.output: ', config.output);
 server.listen(8089, 'localhost', function() {
   console.log('Webpack Server is running........................', arguments);
 });

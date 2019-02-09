@@ -23,17 +23,35 @@
 }
 .page-content .main-aside {
   padding: 1em;
-  background-color: lightcoral;
+  background-color: #d8d8d8;
   flex: 0 1 320px;
+  max-width: 1200px;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+  opacity: 1;
+}
+.main-aside.collapsed {
+  max-width: 0;
+  overflow: hidden;
+  padding-right: 0;
+  padding-left: 0;
+  opacity: 0;
+  transition: all .5s cubic-bezier(0.1, 1.07, 0.58, 1);
+  z-index: -5;
 }
 .page-content .main-page-content {
   padding: 1em;
-  background-color: lightgrey;
+  background-color: #fff;
   min-height: 80vh;
   flex: none;
 }
 .page-footer {
   background-color: #555555;
+}
+header.navbar {
+  background-color: #283593;
+  box-shadow: inset 0px 0px 19px #000, inset 0px 0px 19px 20px #0f191a57;
+  color: #fff;
 }
 
 @media (min-width: 1200px) {

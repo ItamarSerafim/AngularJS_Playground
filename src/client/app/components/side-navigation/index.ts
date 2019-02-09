@@ -12,11 +12,13 @@ const sideNaveModule = angular
       links: "="
     },
     template: `
-    <ul class="list-unstyled sidenav-sublinks">
+    <ul class="list-unstyled sidenav-sublinks" >
       <li  class="link-item"
         data-ng-repeat="link in  $ctrl.links | filter: $ctrl.searchQuery as results"
-        data-ng-init="link.expanded = (results.length == 1)">
-        <a class="btn" data-ng-click="$ctrl.goto(link)">
+        data-ng-init="link.expanded = (results.length == 1)"
+        ng-class="{ active: $ctrl.isActiveUrl(link.url) }"
+        >
+        <a class="btn" data-ng-click="$ctrl.goto(link)" ui-sref-active="active" ui-sref="{{link.url}}" >
             <i class="fa fa-{{::link.icon || 'dot-circle'}}" data-ng-if="!link.iconUrl"></i>
             <i class="link-iconurl" data-ng-if="link.iconUrl" style="background-image: url({::link.iconUrl})"></i>
             <span class="flex text-left">{{link.title}}</span>
@@ -25,18 +27,32 @@ const sideNaveModule = angular
 
         <sublink
           data-ng-class="{'expanded': (link.expanded || results.length == 1)}"
-          da-ng-if="link.links.length" links="link.links"></sublink>
+          data-ng-if="link.links.length" links="link.links"></sublink>
       </li>
     <ul>
   `,
     controller: [
       "$scope",
       "$state",
-      function($scope, $state) {
+      '$location',
+      function($scope, $state, $location) {
+
+        this.isActiveUrl = function(url: string){
+          const isActiveUrl = $state.$current.parent.self.url + $state.$current.self.url === ('/' + url);
+          return isActiveUrl;
+        }
+
         this.goto = function(link: Link) {
           console.log(link, "\t state is printed to the console...");
           link.expanded = !link.expanded;
-          $state.go(link.url);
+          this.$state = $scope.$state = $state;
+
+          console.log("\t link.url : ", link.url );
+          $location.path(link.url || link.path);
+          $state.go(link.url );
+          this.currentState = $state.$current.name;
+          console.log($state.$current.self.url);
+
         };
       }
     ]

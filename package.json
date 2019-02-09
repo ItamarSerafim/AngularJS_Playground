@@ -12,7 +12,8 @@
     "build": "dev-server --mode development --open",
     "dev": "node dev-server.js",
     "posttest": "npm run lint && nsp check",
-    "webpack": "webpack"
+    "webpack": "npx webpack",
+    "compilation": "npx webpack --config webpack.config.js"
   },
   "dependencies": {
     "@types/angular": "^1.6.53",
@@ -46,8 +47,8 @@
     "nsp": "^2.1.0",
     "ts-loader": "^5.3.1",
     "typescript": "^3.2.2",
-    "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.10"
   },
   "repository": {
