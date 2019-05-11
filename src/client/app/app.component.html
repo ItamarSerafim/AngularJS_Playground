@@ -3,7 +3,7 @@
     class="main-aside"
     data-ng-class="{ expanded: vm.sideNavService.open, collapsed: !vm.sideNavService.open }"
   >
-    <h4>Side navigation:</h4>
+    <h4> Side navigation:</h4>
     <app-side-nav links="vm.links"></app-side-nav>
   </aside>
 
@@ -21,7 +21,7 @@
       <button class="btn cross">&#735;</button>
       <button class="btn btn-light nav-trigger">Toogle side-nav</button> -->
 
-      <h3>AngularJs with Bootstrap 4</h3>
+      <h3> <a ui-sref="home" class="btn"><i class="fa fa-home" data-ng-if="!link.iconUrl"></i></a>AngularJs with Bootstrap 4</h3>
     </header>
 
     <main class="main-page-content flex">

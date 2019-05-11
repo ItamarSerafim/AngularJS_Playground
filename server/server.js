@@ -1,5 +1,5 @@
 'use strict';
-
+var  express = require('express');
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 
@@ -27,14 +27,16 @@ var ignoredPaths = [
   '/admin',
   '/components',
 ];
-
+app.use(express.static(path.join(__dirname, '..', 'client')));
 app.all('/*', function(req, res, next) {
   // Redirecting to index only the requests that do not start with ignored paths
   debugger;
-  if (!startsWith(req.url, ignoredPaths))
+  if (!startsWith(req.url, ignoredPaths)) {
+
     res.sendFile('index.html', {
       root: path.resolve(__dirname, '..', 'client'),
     });
+  }
   else next();
 });
 

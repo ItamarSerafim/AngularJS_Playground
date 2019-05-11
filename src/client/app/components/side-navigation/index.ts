@@ -38,7 +38,10 @@ const sideNaveModule = angular
       function($scope, $state, $location) {
 
         this.isActiveUrl = function(url: string){
-          const isActiveUrl = $state.$current.parent.self.url + $state.$current.self.url === ('/' + url);
+          let parentRoute = $state.$current.parent;
+
+
+          const isActiveUrl = parentRoute && (parentRoute.self.url + $state.$current.self.url === ('/' + url) );
           return isActiveUrl;
         }
 

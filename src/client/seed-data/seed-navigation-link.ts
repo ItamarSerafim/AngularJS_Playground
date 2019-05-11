@@ -1,5 +1,18 @@
 const seedLinks = [
-
+  {
+    title: "Site Adminstration",
+    description: "Site administration page.",
+    path: "admin",
+    disable: false,
+    expanded: false,
+    icon: "",
+    iconUrl: "assets/images/admin-user.png",
+    order: 1,
+    createdDate: "2018-09-23T19:09:43.886Z",
+    id: 7,
+    lastUpdateDate: "2018-09-20T03:55:31.377Z",
+    showAt: "side-menu"
+  },
   {
     title: "Dashboard",
     description: "Go to dashboard page.",
@@ -122,20 +135,6 @@ const seedLinks = [
     lastUpdateDate: "2018-09-17T05:30:43.120Z"
   },
   {
-    title: "Site Adminstration",
-    description: "Site administration page.",
-    path: "admin",
-    disable: false,
-    expanded: false,
-    icon: "",
-    iconUrl: "assets/images/admin-user.png",
-    order: 1,
-    createdDate: "2018-09-23T19:09:43.886Z",
-    id: 7,
-    lastUpdateDate: "2018-09-20T03:55:31.377Z",
-    showAt: "side-menu"
-  },
-  {
     title: "Checklists",
     description: "Create and manage checklists",
     path: "checklists",
@@ -237,6 +236,16 @@ const seedLinks = [
     title: "Login",
     description: "Go to login component",
     path: "login",
+    disable: false,
+    expanded: false,
+    icon: "icon-skype",
+    iconUrl: "",
+    order: 9999999
+  },
+  {
+    title: "About us",
+    description: "Go to About us component",
+    path: "about",
     disable: false,
     expanded: false,
     icon: "icon-skype",

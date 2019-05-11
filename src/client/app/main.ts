@@ -9,12 +9,14 @@ import {
   IState
 } from '../../../node_modules/@types/angular-ui-router/index';
 import homeModule from './components/home/index';
+import aboutModule from './components/about/index';
+import notFoundModule from './components/not-found/index';
 import makeScrollModule from './dev-support-components/make-scroll/index'; /* TODO: remove this test*/
 import AppComponent from './app.component';
 import { AppComponentController } from './app.component';
 import sideNavModule from './components/side-navigation/index';
 
-let app: ng.IModule = angular.module('App', ['ui.router', homeModule, makeScrollModule, sideNavModule])
+let app: ng.IModule = angular.module('App', ['ui.router', notFoundModule, aboutModule, homeModule, makeScrollModule, sideNavModule])
 // TODO: What did I want to do here? Can't remember
 // .run(['$rootScope', function($rootScope: ng.IScope, $state: IState){
 //   $rootScope['$state']  = $state;
@@ -68,7 +70,6 @@ let app: ng.IModule = angular.module('App', ['ui.router', homeModule, makeScroll
     <p class="warning">Coming soon!</p>
   `
 })
-
 .config(['$stateProvider', '$urlRouterProvider',
   ($stateProvider: IStateProvider, $urlRouterProvider: IUrlRouterProvider ) => {
     $stateProvider
@@ -86,6 +87,18 @@ let app: ng.IModule = angular.module('App', ['ui.router', homeModule, makeScroll
     .state('dashboard.section02',{
       url: '/section02',
       template: '<section02></section02>'
+    })
+    .state('home', {
+      url: '/home',
+      component: 'home'
+    })
+    .state('about', {
+      url: '/about',
+      component: 'about'
+    })
+    .state('not-found', {
+      url: '/not-found',
+      component: 'not-found'
     })
     .state({
       name: 'login',
@@ -109,7 +122,7 @@ let app: ng.IModule = angular.module('App', ['ui.router', homeModule, makeScroll
     });
 
 
-    $urlRouterProvider.otherwise('/test');
+    $urlRouterProvider.otherwise('/not-found');
   }
 ]);
 
