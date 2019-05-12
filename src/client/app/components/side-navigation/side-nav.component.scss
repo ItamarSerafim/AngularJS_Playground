@@ -38,6 +38,17 @@
       transition: transform 300ms ease-in-out;
     }
   }
+  &.collapsed {
+    .sidenav-sublinks {
+      max-height: 0;
+      transition: max-height 1s ease-in-out;
+    }
+    .fa.fa-chevron-down {
+      transform: rotate(0deg);
+      transition: transform 300ms ease-in-out;
+    }
+  }
+
 }
 .sidenav-sublinks {
   max-height: 0px;

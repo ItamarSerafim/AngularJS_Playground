@@ -5,18 +5,18 @@ import SideNavService from "./side-nav.service";
 import SideNavComponent from "./side-nav.component";
 
 const sideNaveModule = angular
-  .module("app.sidenav", [])
+  .module("App.sidenav", [])
   .service('sidenavService', [SideNavService])
   .component("sublink", {
     bindings: {
       links: "="
     },
+    //  data-ng-init="link.expanded = (results.length == 1)"
     template: `
     <ul class="list-unstyled sidenav-sublinks" >
       <li  class="link-item"
         data-ng-repeat="link in  $ctrl.links | filter: $ctrl.searchQuery as results"
-        data-ng-init="link.expanded = (results.length == 1)"
-        ng-class="{ active: $ctrl.isActiveUrl(link.url) }"
+        ng-class="{ active: $ctrl.isActiveUrl(link.url), expanded: link.expanded, collapsed: !link.expanded }"
         >
         <a class="btn" data-ng-click="$ctrl.goto(link)" ui-sref-active="active" ui-sref="{{link.url}}" >
             <i class="fa fa-{{::link.icon || 'dot-circle'}}" data-ng-if="!link.iconUrl"></i>
@@ -39,7 +39,6 @@ const sideNaveModule = angular
 
         this.isActiveUrl = function(url: string){
           let parentRoute = $state.$current.parent;
-
 
           const isActiveUrl = parentRoute && (parentRoute.self.url + $state.$current.self.url === ('/' + url) );
           return isActiveUrl;

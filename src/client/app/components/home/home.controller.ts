@@ -11,7 +11,7 @@ class HomeComponentController implements ng.IComponentController {
 }
 
 
-export default class HomeComponent implements ng.IComponentController {
+export default class HomeController implements ng.IComponentController {
   public controller: ng.Injectable<ng.IControllerConstructor>;
   public template: string;
 

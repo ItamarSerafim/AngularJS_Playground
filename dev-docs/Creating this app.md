@@ -1,5 +1,9 @@
 ##Run this for development:
 npm run dev
+##Build this app:
+npm run webpack
+##Run production:
+npm start
 
 x. Create a loopback app[https://loopback.io/doc/en/lb3/Application-generator.html]
   CLI command: lb - if loopback is already installed.

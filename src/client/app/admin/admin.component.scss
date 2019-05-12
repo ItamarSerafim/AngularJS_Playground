@@ -1,0 +1,22 @@
+.admin-card-wrap {
+  flex-wrap: wrap;
+  .card {
+    flex: 1;
+    padding: .5rem;
+    margin: .5rem;
+    flex-basis: 15rem;
+    flex-grow: 3;
+    .img-wrap {
+      height: 33%;
+      font-size: 4rem;
+      color: #ccc;
+      text-align: center;
+      margin-bottom: .5rem;
+    }
+    .card-body {  display: flex; flex-direction: column;   height: 100%; }
+    &.last2 {
+      max-width: 18rem;
+    }
+  }
+}
+

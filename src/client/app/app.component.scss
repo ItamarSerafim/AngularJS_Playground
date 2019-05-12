@@ -15,9 +15,21 @@
   flex-direction: row;
 }
 .flex-col > .flex,
-.flex-row > .flex {
+.flex-row > .flex, .flex-spacer {
   flex: 1;
 }
+
+
+header.navbar {
+  background-color: #283593;
+  box-shadow: inset 0px 0px 19px #000, inset 0px 0px 19px 20px #0f191a57;
+  color: #fff;
+  a {
+    color: #fff;
+  }
+}
+
+
 .page-content {
   min-height: 100vh;
 }
@@ -48,12 +60,6 @@
 .page-footer {
   background-color: #555555;
 }
-header.navbar {
-  background-color: #283593;
-  box-shadow: inset 0px 0px 19px #000, inset 0px 0px 19px 20px #0f191a57;
-  color: #fff;
-}
-
 @media (min-width: 1200px) {
   .bd-sidebar {
     flex: 0 1 320px;

@@ -1,5 +1,5 @@
 import templateUrl from './home.component.html';
-import { IComponentOptions, IComponentController } from "../../../../../node_modules/@types/angular/index";
+import { IComponentOptions, IComponentController } from 'angular';//"../../../../../node_modules/@types/angular/index";
 
 class HomeComponentController implements IComponentController {
 

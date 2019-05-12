@@ -9,87 +9,69 @@ const seedLinks = [
     iconUrl: "assets/images/admin-user.png",
     order: 1,
     createdDate: "2018-09-23T19:09:43.886Z",
-    id: 7,
+    id: 1,
     lastUpdateDate: "2018-09-20T03:55:31.377Z",
-    showAt: "side-menu"
-  },
-  {
-    title: "Dashboard",
-    description: "Go to dashboard page.",
-    path: "admin/dashboard",
-    disable: false,
-    expanded: false,
-    icon: "icon-bar-chart",
-    iconUrl: "",
-    order: 1,
-    id: 1,
-    showAt: "side-nav",
+    showAt: "side-menu",
     links: [
       {
-        title: "Section #1",
-        description: "Go to dashboard section #1",
-        path: "admin/dashboard/section01",
+        title: "Dashboard",
+        description: "Go to dashboard page.",
+        path: "admin/dashboard",
         disable: false,
         expanded: false,
-        icon: "icon-skype",
+        icon: "icon-bar-chart",
         iconUrl: "",
-        order: 9999999
+        order: 1,
+        id: 1,
+        showAt: "side-nav",
+        links: [
+          {
+            title: "Section #1",
+            description: "Go to dashboard section #1",
+            path: "admin/dashboard/section01",
+            disable: false,
+            expanded: false,
+            icon: "icon-skype",
+            iconUrl: "",
+            order: 9999999
+          },
+          {
+            title: "Section #2",
+            description: "Go to dashboard section #2",
+            path: "admin/dashboard/section02",
+            disable: false,
+            expanded: false,
+            icon: "icon-instagram",
+            iconUrl: "",
+            order: 9999999
+          },
+        ]
       },
       {
-        title: "Section #2",
-        description: "Go to dashboard section #2",
-        path: "admin/dashboard/section02",
-        disable: false,
-        expanded: false,
-        icon: "icon-instagram",
-        iconUrl: "",
-        order: 9999999
-      },
-    ]
-  },
-  {
-    title: "Gerenciar usuário",
-    description: "Ir para a página de gerenciar usuários.",
-    path: "admin/user-management",
-    disable: false,
-    expanded: false,
-    icon: "people",
-    iconUrl: "",
-    order: 9999999,
-    createdDate: "2018-09-23T19:09:43.884Z",
-    id: 1,
-    lastUpdateDate: "2018-09-22T21:21:06.397Z",
-    showAt: "",
-    links: [
-      {
-        title: "Permissões",
-        description: "Gerenciar permissões de usuários.",
-        path: "admin/manage-user-permissions",
+        title: "Gerenciar usuário",
+        description: "Ir para a página de gerenciar usuários.",
+        path: "admin/user-management",
         disable: false,
         expanded: false,
         icon: "people",
         iconUrl: "",
-        order: 9999999
-      },
-      {
-        title: "Permissões",
-        description: "Gerenciar permissões de usuários.",
-        path: "admin/manage-user-permissions",
-        disable: false,
-        expanded: false,
-        icon: "people",
-        iconUrl: "",
-        order: 9999999
-      },
-      {
-        title: "Testio",
-        description: "Tio component.",
-        path: "testio",
-        disable: false,
-        expanded: false,
-        icon: "people",
-        iconUrl: "",
-        order: 9999999
+        order: 9999999,
+        createdDate: "2018-09-23T19:09:43.884Z",
+        id: 1,
+        lastUpdateDate: "2018-09-22T21:21:06.397Z",
+        showAt: "",
+        links: [
+          {
+            title: "Permissões",
+            description: "Gerenciar permissões de usuários.",
+            path: "admin/manage-user-permissions",
+            disable: false,
+            expanded: false,
+            icon: "people",
+            iconUrl: "",
+            order: 9999999
+          }
+        ]
       }
     ]
   },
@@ -248,7 +230,17 @@ const seedLinks = [
     path: "about",
     disable: false,
     expanded: false,
-    icon: "icon-skype",
+    icon: "heart",
+    iconUrl: "",
+    order: 9999999
+  },
+  {
+    title: "contact",
+    description: "Get in touch with us",
+    path: "contact",
+    disable: false,
+    expanded: false,
+    icon: "id-card",
     iconUrl: "",
     order: 9999999
   }

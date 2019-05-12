@@ -6,6 +6,6 @@ export default function routes($stateProvider: IStateProvider) {
   .state({
     name: 'home',
     url: '/home',
-    component: 'homeComponent'
+    component: 'home'
   });
 }
