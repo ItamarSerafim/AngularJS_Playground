@@ -12,7 +12,6 @@ export default class SideNavController implements ng.IComponentController {
   }
 
   goto(link: Link){
-    console.log(link, "\t state is printed to the console...");
     link.expanded = !link.expanded;
     this.$location.path(link.url || link.path);
   }

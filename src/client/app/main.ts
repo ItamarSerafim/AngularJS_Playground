@@ -36,8 +36,8 @@ let app: ng.IModule = angular.module('App', [
 // .run(['$rootScope', function($rootScope: ng.IScope, $state: IState){
 //   $rootScope['$state']  = $state;
 // }])
+// Broadcast window events here
 .run(["$window", "$rootScope", function ($window: IWindowService, $rootScope: IRootScopeService) {
-  window['leRootScope'] = $rootScope;
   $window.addEventListener('resize', function(e) {
     $rootScope.$broadcast('app.onWindowResized', e);
   });

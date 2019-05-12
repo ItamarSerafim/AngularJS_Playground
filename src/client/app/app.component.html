@@ -3,7 +3,7 @@
     class="main-aside"
     data-ng-class="{ expanded: vm.sideNavService.open, collapsed: !vm.sideNavService.open }"
   >
-    <h4> Side navigation:</h4>
+    <h4> Side navigation</h4>
     <app-side-nav links="vm.links"></app-side-nav>
   </aside>
 
@@ -18,9 +18,13 @@
       <button class="btn cross">&#735;</button>
       <button class="btn btn-light nav-trigger">Toogle side-nav</button> -->
 
-      <h3> <a ui-sref="home" class="btn"><i class="fa fa-home" data-ng-if="!link.iconUrl"></i></a>AngularJs with Bootstrap 4</h3>
+      <h3 class="page-title"> <a ui-sref="home" class="btn"><i class="fa fa-home" data-ng-if="!link.iconUrl"></i></a>AngularJs with Bootstrap 4</h3>
       <span class="flex-spacer"></span>
+      <a ui-sref="login" class="btn"><i class="fa fa-bell" data-ng-if="!link.iconUrl"></i></a>
       <a ui-sref="login" class="btn"><i class="fa fa-user-lock" data-ng-if="!link.iconUrl"></i></a>
+      <a ui-sref="login" class="btn"><i class="fa fa-ellipsis-v" data-ng-if="!link.iconUrl"></i></a>
+
+
     </header>
 
     <main class="main-page-content flex">
@@ -28,7 +32,7 @@
       <ui-view></ui-view>
     </main>
 
-    <footer class="page-footer flex"><h3>Footer goes here</h3></footer>
+    <footer class="page-footer flex text-center"><h3>Footer goes here</h3></footer>
   </section>
 </div>
 <style></style>

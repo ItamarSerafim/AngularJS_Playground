@@ -45,7 +45,6 @@ const sideNaveModule = angular
         }
 
         this.goto = function(link: Link) {
-          console.log(link, "\t state is printed to the console...");
           link.expanded = !link.expanded;
           this.$state = $scope.$state = $state;
 

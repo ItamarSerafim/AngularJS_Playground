@@ -90,20 +90,6 @@ const seedLinks = [
     showAt: "side-menu"
   },
   {
-    title: "Link with very, very long text",
-    description: "View and manage this site features.",
-    path: "site-features",
-    disable: false,
-    expanded: false,
-    icon: "apps",
-    iconUrl: "",
-    order: 9999999,
-    createdDate: "2018-09-23T19:09:43.886Z",
-    id: 4,
-    lastUpdateDate: "2018-09-20T01:49:41.117Z",
-    showAt: "side-menu"
-  },
-  {
     title: "User permissions",
     description: "Manage user permissions.",
     path: "admin/site-settings/user-permissions",

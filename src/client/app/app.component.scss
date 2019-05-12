@@ -28,7 +28,9 @@ header.navbar {
     color: #fff;
   }
 }
-
+.page-title {
+  margin-bottom: 0;
+}
 
 .page-content {
   min-height: 100vh;
@@ -58,7 +60,11 @@ header.navbar {
   flex: none;
 }
 .page-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #555555;
+  color: #fff;
 }
 @media (min-width: 1200px) {
   .bd-sidebar {

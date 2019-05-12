@@ -32,7 +32,6 @@ export class AppComponentController implements IComponentController {
 
   public $onInit () {
     this.links = this.sideNavService.links;
-    console.log('this.links: ', this.links)
     this.greeting = 'Everything works fine!!!';
   }
 }
